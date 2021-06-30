@@ -1,6 +1,7 @@
 :root {
   /* COLOR */
   --white: #ffffff;
+  --whitely: #eeeeee;
   --light-white: #dddddd;
   --red: #ff3737;
   --black: #333333;
@@ -26,6 +27,10 @@
 
   /* space */
   --base-space: 8px;
+
+  /* annimation */
+  --transition-duration: 200ms;
+  --scale-rate: 1.05;
 }
 
 /* @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css); */
@@ -68,6 +73,7 @@ a {
 .section {
   width: var(--page-size);
   margin: auto;
+  cursor: default;
 }
 
 .icon {
@@ -319,11 +325,11 @@ a {
 
 .goods .image-wrapper img {
   opacity: 0.8;
-  transition: all 300ms ease-in;
+  transition: all var(--transition-duration) ease-in;
 }
 
 .goods .image-wrapper:hover img {
-  transform: scale(1.1);
+  transform: scale(var(--scale-rate));
 }
 
 .goods__title {
@@ -359,4 +365,50 @@ a {
 .delivery-icon {
   width: 72px;
   height: 16px;
+}
+
+/* Standards */
+.standards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  background-color: var(--whitely);
+  border-radius: 8px;
+}
+
+.standards__right {
+  display: flex;
+}
+
+.standard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+}
+
+.standard .image-wrapper {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  margin-bottom: 4px;
+}
+
+.standard-icon {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  transition: all var(--transition-duration) linear;
+}
+
+.standard:hover span {
+  text-decoration: underline;
+  font-weight: var(--font-weight-regular);
+}
+
+.standard:hover .standard-icon {
+  transform: scale(var(--scale-rate));
 }
