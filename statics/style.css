@@ -269,8 +269,8 @@ a {
 /* Best */
 .section__container {
   width: 944px;
-  margin: 36px auto 0;
-  padding-bottom: 36px;
+  margin: 0 auto;
+  padding: 36px 0;
   display: flex;
   flex-direction: column;
   border-bottom: 1px solid var(--light-white);
@@ -411,4 +411,39 @@ a {
 
 .standard:hover .standard-icon {
   transform: scale(var(--scale-rate));
+}
+
+/* 기획전 */
+.promotion {
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.promotion .image-wrapper {
+  border-radius: 8px;
+}
+
+.promotion-banner {
+  width: 624px;
+  height: 144px;
+  transition: all var(--transition-duration) linear;
+  cursor: pointer;
+}
+
+.promotion-banner:hover {
+  transform: scale(var(--scale-rate));
+}
+
+.goods__title {
+  text-overflow: ellipsis;
+  align-items: center;
+  display: -webkit-box;
+  overflow: hidden;
+  white-space: normal;
+  width: 100%;
+  line-height: 1.2;
+  height: 2.5em;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  word-break: break-word;
 }
