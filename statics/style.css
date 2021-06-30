@@ -1,6 +1,7 @@
 :root {
   /* COLOR */
   --white: #ffffff;
+  --light-white: #dddddd;
   --red: #ff3737;
   --black: #333333;
   --dark-grey: #73675c;
@@ -12,19 +13,28 @@
   --font-weight-regular: 500;
   --font-weight-normal: 300;
 
-  /* SIZE */
+  /* FONT-SIZE */
   --font-large: 24px;
   --font-medium-large: 16px;
   --font-medium: 15px;
   --font-small: 12px;
 
+  /* SIZE */
+  --page-size: 1080px;
+
   /* space */
   --base-space: 8px;
 }
 
-body {
-  font-family: 'Noto Sans', sans-serif;
+/* @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css); */
+* {
+  font-family: 'Noto Sans KR', sans-serif;
   box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
 }
 
 h1 {
@@ -46,4 +56,51 @@ ul {
   padding: 0;
   display: flex;
   list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.section {
+  width: var(--page-size);
+  margin: auto;
+}
+
+/* MENU */
+#menu {
+  font-size: var(--font-small);
+  padding: calc(var(--base-space) * 2) 0;
+  border-bottom: 1px solid var(--light-white);
+}
+
+#menu li::after {
+  content: '';
+  display: inline-block;
+  height: 8px;
+}
+
+#menu li:not(:last-child)::after {
+  border-right: 1px solid var(--light-grey);
+  margin: 0 8px;
+}
+
+.menu__items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--light-grey);
+}
+
+.menu__left a {
+  color: var(--light-grey);
+}
+
+#menu li.active a {
+  color: var(--black);
+}
+
+.menu__right a {
+  font-weight: var(--font-weight-regular);
+  color: var(--grey);
 }
