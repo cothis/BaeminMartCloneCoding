@@ -11,15 +11,15 @@
 </head>
 <body>
     <section id="menu">
-        <div class="section menu__items">
-            <ul class="menu__left">
+        <div class="section menu">
+            <ul class="menu__items menu__left">
                 <li><a href="#">배민사장님광장</a></li>
                 <li><a href="#">배민셀프서비스</a></li>
                 <li class="active"><a href="#">배민상회</a></li>
                 <li><a href="#">배민아카데미</a></li>
                 <li><a href="#">배민장부</a></li>
             </ul>
-            <ul class="menu__right">
+            <ul class="menu__items menu__right">
                 <li><a href="#">로그인</a></li>
                 <li><a href="#">회원가입</a></li>
                 <li><a href="#">고객센터</a></li>
@@ -1256,7 +1256,7 @@
         <div class="recent__title">최근 본 상품</div>
         <div class="recent__count">1</div>
         <div class="recent__list">
-            <img src="assets/icons/up.svg" alt="up">
+            <img src="assets/icons/up.svg" alt="up" class="direct-icon">
             <div class="recent__items">
                 <div class="recent__item">
                     <button class="item">
@@ -1267,52 +1267,58 @@
                     </button>
                 </div>
             </div>
-            <img src="assets/icons/down.svg" alt="down">
+            <img src="assets/icons/down.svg" alt="down" class="direct-icon">
         </div>
-        <button>TOP</button>
+        <button class="top-button">TOP</button>
     </aside>
     <footer id="footer">
-        <ul>
-            <li><a href="#">공지사항</a></li>
-            <li><a href="#">배민상회 이용약관</a></li>
-            <li><a href="#">사장님광장 이용약관</a></li>
-            <li><a href="#">전자금융거래 이용약관</a></li>
-            <li><a href="#">개인정보처리방침</a></li>
-            <li><a href="#">
-                <img src="assets/icons/ccm.png" alt="ccm">
-                소비자중심경영
-            </a></li>
-        </ul>
-        <div class="company">
-            <div class="company__info">
-                <div>
-                    <span>대표이사:김봉진,김범준</span>
-                    <span>주소:서울특별시 송파구 위례성대로2 장은빌딩 18층</span>
-                </div>
-                <div>
-                    <span>사업자등록번호:120-87-65763</span>
-                    <span>통신판매업신고번호:2012-서울송파-0515</span>
-                </div>
-                <div>
-                    <span>팩스:02-532-5854</span>
-                    <span>이메일:baemin_mart@woowahan.com</span>
-                </div>
-                <span>상호명:(주)우아한형제들</span>
+        <section class="footer__menu">
+            <div class="section">
+                <ul class="menu__items">
+                    <li><a href="#">공지사항</a></li>
+                    <li><a href="#">배민상회 이용약관</a></li>
+                    <li><a href="#">사장님광장 이용약관</a></li>
+                    <li><a href="#">전자금융거래 이용약관</a></li>
+                    <li><a href="#" class="bold">개인정보처리방침</a></li>
+                    <li><a href="#" class="bold ccm-wrapper">
+                        <img src="assets/icons/ccm.png" alt="ccm" class="ccm">
+                        소비자중심경영
+                    </a></li>
+                </ul>
             </div>
-            <div class="dept">
-                <div>하나은행 채무지급보증 안내</div>
-                <p>당사는 고객님이 현금 결제한 금액에 대해 하나은행과 채무지급보증 계약을 체결하여 안전거래를 보장하고 있습니다.</p>
-                <div>서비스 가입사실 확인</div>
+        </section>
+        <section class="company">
+            <div class="section">
+                <div class="company__info">
+                    <div>
+                        <span>대표이사:김봉진,김범준</span>
+                        <span>주소:서울특별시 송파구 위례성대로2 장은빌딩 18층</span>
+                    </div>
+                    <div>
+                        <span>사업자등록번호:120-87-65763</span>
+                        <span>통신판매업신고번호:2012-서울송파-0515</span>
+                    </div>
+                    <div>
+                        <span>팩스:02-532-5854</span>
+                        <span>이메일:baemin_mart@woowahan.com</span>
+                    </div>
+                    <span>상호명:(주)우아한형제들</span>
+                </div>
+                <div class="dept">
+                    <div>하나은행 채무지급보증 안내</div>
+                    <p>당사는 고객님이 현금 결제한 금액에 대해 하나은행과 채무지급보증 계약을 체결하여 안전거래를 보장하고 있습니다.</p>
+                    <div>서비스 가입사실 확인</div>
+                </div>
+                <div class="customer-center">
+                    <div>배민상회 고객센터</div>
+                    <div>1600-4949</div>
+                    <div>평  일 | 09:00~19:00</div>
+                    <div>토요일 | 09:00~16:00</div>
+                    <div>공휴일 | 09:00~18:00</div>
+                    <div>일요일 및 설,추석은 휴무입니다.</div>
+                </div>
             </div>
-            <div class="customer-center">
-                <div>배민상회 고객센터</div>
-                <div>1600-4949</div>
-                <div>평  일 | 09:00~19:00</div>
-                <div>토요일 | 09:00~16:00</div>
-                <div>공휴일 | 09:00~18:00</div>
-                <div>일요일 및 설,추석은 휴무입니다.</div>
-            </div>
-        </div>
+        </section>
     </footer>
 </body>
 </html>
