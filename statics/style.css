@@ -19,6 +19,7 @@
   --font-medium-large: 16px;
   --font-medium: 15px;
   --font-small: 12px;
+  --font-20: 20px;
   --font-14: 14px;
   --font-10: 10px;
 
@@ -65,6 +66,11 @@ ul {
   list-style: none;
 }
 
+p {
+  margin: 0;
+  padding: 0;
+}
+
 a {
   text-decoration: none;
   color: var(--grey);
@@ -86,6 +92,33 @@ main {
   height: 20px;
   margin: 0;
   padding: 0;
+}
+
+.bold {
+  font-weight: var(--font-weight-bold);
+  color: var(--black);
+}
+
+.underline {
+  text-decoration: underline;
+  color: var(--black);
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.dept__content {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.call {
+  font-size: var(--font-20);
+}
+
+.font-small {
+  font-size: var(--font-10);
 }
 
 /* MENU */
@@ -626,10 +659,10 @@ main {
 }
 
 /* footer */
-.footer__menu {
+.footer__menu,
+.company {
   border-top: 1px solid var(--light-grey);
-  border-bottom: 1px solid var(--light-grey);
-  padding: 8px 0;
+  padding: 16px 0;
 }
 
 .footer__menu .menu__items {
@@ -645,15 +678,38 @@ main {
   font-weight: var(--font-weight-bold);
   color: var(--black) !important;
 }
-/* 
-.ccm-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-} */
 
 .ccm {
   width: 28px;
   vertical-align: middle;
   margin-right: 4px;
+}
+
+/* footer company */
+.company .section {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--font-small);
+  color: var(--grey);
+}
+
+.company__info {
+  flex-basis: 530px;
+}
+
+.company__info > div > span:not(:last-child)::after {
+  content: '';
+  display: inline-block;
+  height: 8px;
+  border-right: 1px solid var(--light-grey);
+  margin: 0 8px;
+}
+
+.dept {
+  flex-basis: 250px;
+}
+
+.company__name {
+  margin-top: 16px;
+  color: var(--black);
 }
