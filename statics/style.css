@@ -32,6 +32,7 @@
 * {
   font-family: 'Noto Sans KR', sans-serif;
   box-sizing: border-box;
+  cursor: default;
 }
 
 body {
@@ -117,7 +118,7 @@ a {
 
 /* Nav */
 #nav {
-  padding: calc(var(--base-space) * 2) 0;
+  padding: 14px 0;
   border-bottom: 1px solid var(--light-white);
 }
 
@@ -215,4 +216,46 @@ a {
 
 .navbar__items img {
   margin-bottom: 5px;
+}
+
+/* Banner */
+.flip {
+  transform: rotateY(180deg);
+}
+
+.banner {
+  position: relative;
+}
+
+.image-wrapper {
+  display: flex;
+  overflow: hidden;
+}
+
+.banner__btn {
+  position: absolute;
+  background-color: transparent;
+  border: 0;
+  outline: none;
+  top: 50%;
+}
+
+.banner__prev {
+  left: 10px;
+}
+
+.banner__next {
+  right: 10px;
+}
+
+.banner__current {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  border-radius: 20px;
+  background-color: rgba(20, 20, 20, 0.5);
+  padding: 4px 12px;
+  color: var(--white);
+  font-size: var(--font-14);
+  letter-spacing: 1px;
 }
