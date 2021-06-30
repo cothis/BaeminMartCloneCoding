@@ -491,3 +491,14 @@ a {
 .new__content .goods__title {
   height: 20px;
 }
+
+/* Welcome */
+.welcome-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.welcome-container img {
+  border-radius: 8px;
+  cursor: pointer;
+}
