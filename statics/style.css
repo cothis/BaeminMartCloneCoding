@@ -599,6 +599,8 @@ main {
   outline: none;
   background-color: var(--light-grey);
   padding: 0;
+  display: flex;
+  box-sizing: content-box;
 }
 
 .direct-icon {
@@ -607,8 +609,8 @@ main {
 }
 
 .recent__items img {
-  width: 60px;
-  height: 60px;
+  width: 100%;
+  height: 100%;
   opacity: 0.8;
 }
 
@@ -637,7 +639,7 @@ main {
   height: 12px;
 }
 
-.recent__item:hover {
+.recent__item:hover .item {
   border: 1px solid var(--light-grey);
 }
 
